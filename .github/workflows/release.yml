@@ -28,6 +28,7 @@ jobs:
             overrides/**
             find_unused_media.py
             .github/workflows/create_index.yml
+            mkdocs.yml
       - name: create zip of changed files
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
