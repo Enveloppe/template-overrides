@@ -38,7 +38,8 @@ jobs:
             mkdir -p changed_files/$(dirname $file)
             cp $file changed_files/$file
           done
-          zip -r changed_files.zip changed_files
+          cd changed_files
+          zip -r changed_files.zip .
       - name: create changelog
         run: |
           npx rexreplace "^.*?#+\s\[.*?\n.*?(?=\s*#+\s\[)" "_" -s -M -G -m -o "CHANGELOG.md" > body_changelog.md
@@ -47,22 +48,22 @@ jobs:
           echo "### Added" >> CHANGELOG-LATEST.md
           echo "" >> CHANGELOG-LATEST.md
           for file in ${{ steps.changed-files.outputs.added_files }}; do
-            echo "- $file" >> CHANGELOG-LATEST.md
+            echo "- [$file]($file)" >> CHANGELOG-LATEST.md
           done
           echo "### Modified" >> CHANGELOG-LATEST.md
           echo "" >> CHANGELOG-LATEST.md
           for file in ${{ steps.changed-files.outputs.modified_files }}; do
-            echo "- $file" >> CHANGELOG-LATEST.md
+            echo "- [$file]($file)" >> CHANGELOG-LATEST.md
           done
           echo "### Removed" >> CHANGELOG-LATEST.md
           echo "" >> CHANGELOG-LATEST.md
           for file in ${{ steps.changed-files.outputs.deleted_files }}; do
-            echo "- $file" >> CHANGELOG-LATEST.md
+            echo "- [$file]($file)" >> CHANGELOG-LATEST.md
           done
           echo "### Renamed" >> CHANGELOG-LATEST.md
           echo "" >> CHANGELOG-LATEST.md
           for file in ${{ steps.changed-files.outputs.renamed_files }}; do
-            echo "- $file" >> CHANGELOG-LATEST.md
+            echo "- [$file]($file)" >> CHANGELOG-LATEST.md
           done
           echo "" >> CHANGELOG-LATEST.md
           echo "---" >> CHANGELOG-LATEST.md
@@ -87,5 +88,5 @@ jobs:
             CHANGELOG.md
             LICENSE
             changed_files.zip
-
+        
 
