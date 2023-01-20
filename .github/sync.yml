@@ -5,6 +5,7 @@ group:
     - overrides/
     - find_unused_media.py
     - .github/workflows/create_index.yml
+    - .github/workflows/auto_update.yml
     repos: |
       ObsidianPublisher/publisher-template-gh-pages
       ObsidianPublisher/publisher-template-netlify
