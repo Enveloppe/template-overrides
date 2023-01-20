@@ -1,6 +1,25 @@
 
-<a name="v1.1.0"></a>
-## [v1.1.0](https://github.com/ObsidianPublisher/follow_template/compare/1.0.1...v1.1.0) (2023-01-20)
+<a name="v1.1.1"></a>
+## [v1.1.1](https://github.com/ObsidianPublisher/follow_template/compare/1.1.0...v1.1.1) (2023-01-20)
+
+### Chore
+
+* **bump:** v1.1.0
+
+### Ci
+
+* **release:** rename steps
+* **release:** better changelog
+* **release:** remove glob
+* **release:** use a better methods to do release since tags
+
+### Docs
+
+* **mkdocs:** add comments on yaml
+
+
+<a name="1.1.0"></a>
+## [1.1.0](https://github.com/ObsidianPublisher/follow_template/compare/1.0.1...1.1.0) (2023-01-20)
 
 ### Chore
 
