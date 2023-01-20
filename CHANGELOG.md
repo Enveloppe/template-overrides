@@ -1,14 +1,20 @@
 ---
-<a name="1.1.5"></a>
-## [1.1.5](https://github.com/ObsidianPublisher/follow_template/compare/1.1.4...1.1.5) (2023-01-20)
+<a name="v1.1.5"></a>
+## [v1.1.5](https://github.com/ObsidianPublisher/follow_template/compare/1.1.4...v1.1.5) (2023-01-20)
 
 ### Chore
 
+* follow mkdocs.yml too
 * **bump:** v1.1.4
 
 ### Ci
 
+* update changelog template
 * **create_release:** prevent error, I guess ?
+
+### Docs
+
+* testing the release template with some comments on the mkdocs.yml
 
 ---
 <a name="1.1.4"></a>
