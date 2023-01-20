@@ -1,16 +1,16 @@
 group:
   - files:
-    - source: file_to_track/mkdocs.yml
+    - source: template/mkdocs.yml
       dest: mkdocs.yml
-    - source: file_to_track/js
+    - source: template/js
       dest: docs/assets/js
-    - source: file_to_track/css
-      dest: docs/assets/css
-    - source: file_to_track/overrides
+    - source: template/css
+      dest: docs/assets/template/css
+    - source: template/overrides
       dest: overrides
     - source: .github/workflows/create_index.yml
       dest: .github/workflows/create_index.yml
-    - source: file_to_track/find_unused_media.py
+    - source: template/find_unused_media.py
       dest: find_unused_media.py
     repos: |
       ObsidianPublisher/publisher-template-gh-pages
