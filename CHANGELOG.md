@@ -1,6 +1,18 @@
 ---
-<a name="v0.0.4"></a>
-## [v0.0.4](https://github.com/ObsidianPublisher/follow_template/compare/0.0.3...v0.0.4) (2023-01-20)
+<a name="v0.0.5"></a>
+## [v0.0.5](https://github.com/ObsidianPublisher/follow_template/compare/0.0.4...v0.0.5) (2023-01-20)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Docs
+
+* add comments to py to check release files
+
+---
+<a name="0.0.4"></a>
+## [0.0.4](https://github.com/ObsidianPublisher/follow_template/compare/0.0.3...0.0.4) (2023-01-20)
 
 ### Chore
 
