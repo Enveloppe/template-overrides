@@ -1,21 +1,22 @@
 ---
-<a name="v1.0.0"></a>
-## v1.0.0 (2023-01-20)
+<a name="v0.0.1"></a>
+## v0.0.1 (2023-01-20)
 
 ### Chore
 
-* fix sync
+* follow mkdocs.yml too
 * submodule update
 * update submodule
 * sync files
-* follow mkdocs.yml too
+* fix sync
 * **bump:** v1.0.1
+* **bump:** v1.1.0
 * **bump:** v1.1.4
 * **bump:** v1.1.3
 * **bump:** v1.1.2
 * **bump:** v1.1.1
-* **bump:** v1.1.0
 * **bump:** v1.0.0
+* **changelog:** update changelog
 * **changelog:** update changelog
 * **changelog:** update changelog
 * **changelog:** update changelog
