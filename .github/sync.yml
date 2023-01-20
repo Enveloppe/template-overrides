@@ -1,7 +1,17 @@
 group:
   - files:
-    - source: mkdocs_ref.yml
+    - source: file_to_track/mkdocs.yml
       dest: mkdocs.yml
+    - source: file_to_track/js
+      dest: docs/assets/js
+    - source: file_to_track/css
+      dest: docs/assets/css
+    - source: file_to_track/overrides
+      dest: overrides
+    - source: .github/workflows/create_index.yml
+      dest: .github/workflows/create_index.yml
+    - source: file_to_track/find_unused_media.py
+      dest: find_unused_media.py
     repos: |
       ObsidianPublisher/publisher-template-gh-pages
       ObsidianPublisher/publisher-template-netlify

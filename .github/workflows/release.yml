@@ -11,17 +11,34 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          submodules: true
+          fetch-depth: 0
       - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Changelog
-        run: npx rexreplace "^.*?#+\s\[.*?\n.*?(?=\s*#+\s\[)" "_" -s -M -G -m -o "CHANGELOG.md" > CHANGELOG-LATEST.md
-      - name: Zip netlify folder
-        run: zip -r netlify.zip publisher-template-netlify
-      - name: Zip gh-pages folder
-        run: zip -r gh-pages.zip publisher-template-gh-pages
+      - name: Get changed files
+        id: changed-files
+        uses: jitterbit/get-changed-files@v1
+      - name: create zip of changed files
+        run: |
+          mkdir -p changed_files
+          for file in ${{ steps.changed-files.outputs.all }}; do
+            mkdir -p changed_files/$(dirname $file)
+            cp $file changed_files/$file
+          done
+          zip -r changed_files.zip changed_files
+      - name: create list of edited files
+        run: |
+          npx rexreplace "^.*?#+\s\[.*?\n.*?(?=\s*#+\s\[)" "_" -s -M -G -m -o "CHANGELOG.md" > body_changelog.md
+          echo "## Edited files" > CHANGELOG-LATEST.md
+          echo "" >> CHANGELOG-LATEST.md
+          for file in ${{ steps.changed-files.outputs.all }}; do
+            echo "- $file" >> CHANGELOG-LATEST.md
+          done
+          echo "" >> CHANGELOG-LATEST.md
+          echo "## Changelog" >> CHANGELOG-LATEST.md
+          echo "" >> CHANGELOG-LATEST.md
+          cat body_changelog.md >> CHANGELOG-LATEST.md
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
@@ -39,6 +56,6 @@ jobs:
             README.md
             CHANGELOG.md
             LICENSE
-            netlify.zip
-            gh-pages.zip
+            changed_files.zip
+
 
