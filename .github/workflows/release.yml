@@ -19,13 +19,6 @@ jobs:
       - name: Get changed files since the last tags
         id: changed-files
         uses: jsmith/changes-since-last-tag@v0.3.3
-        with: 
-          glob: |
-            mkdocs.yml
-            docs/**
-            overrides/**
-            find_unused_media.py
-            .github/workflows/create_index.yml
       - name: create zip of changed files
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
