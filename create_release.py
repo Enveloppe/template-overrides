@@ -13,7 +13,7 @@ def create_tag(tag_name: str):
     print("Changelog updated")
     # push tag
     origin = repo.remote(name="origin")
-    origin.push(tag)
+    origin.push(tag_name)
     print("Tag pushed to origin")
 
 def generate_changelog(version: str):
