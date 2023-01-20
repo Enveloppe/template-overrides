@@ -1,17 +1,10 @@
 group:
   - files:
-    - source: template/mkdocs.yml
-      dest: mkdocs.yml
-    - source: template/js
-      dest: docs/assets/js
-    - source: template/css
-      dest: docs/assets/css/template
-    - source: template/overrides
-      dest: overrides
-    - source: .github/workflows/create_index.yml
-      dest: .github/workflows/create_index.yml
-    - source: template/find_unused_media.py
-      dest: find_unused_media.py
+    - mkdocs.yml
+    - docs/
+    - overrides/
+    - find_unused_media.py
+    - .github/workflows/create_index.yml
     repos: |
       ObsidianPublisher/publisher-template-gh-pages
       ObsidianPublisher/publisher-template-netlify
