@@ -1,6 +1,20 @@
 
-<a name="v1.0.1"></a>
-## [v1.0.1](https://github.com/ObsidianPublisher/follow_template/compare/1.0.0...v1.0.1) (2023-01-20)
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/ObsidianPublisher/follow_template/compare/1.0.0...1.0.1) (2023-01-20)
+
+### Chore
+
+* update submodule
+* submodule update
+* **bump:** v1.0.0
+
+### Ci
+
+* **release:** Update release script to use new release process
+
+### Fix
+
+* fix to main
 
 
 <a name="1.0.0"></a>
