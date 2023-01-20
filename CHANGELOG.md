@@ -1,6 +1,18 @@
+---
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/ObsidianPublisher/follow_template/compare/1.1.4...1.1.5) (2023-01-20)
 
-<a name="v1.1.4"></a>
-## [v1.1.4](https://github.com/ObsidianPublisher/follow_template/compare/1.1.3...v1.1.4) (2023-01-20)
+### Chore
+
+* **bump:** v1.1.4
+
+### Ci
+
+* **create_release:** prevent error, I guess ?
+
+---
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/ObsidianPublisher/follow_template/compare/1.1.3...1.1.4) (2023-01-20)
 
 ### Chore
 
@@ -10,7 +22,7 @@
 
 * **mkdocs:** add more info about blog_list
 
-
+---
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/ObsidianPublisher/follow_template/compare/1.1.2...1.1.3) (2023-01-20)
 
@@ -22,7 +34,7 @@
 
 * **release:** fix github token
 
-
+---
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/ObsidianPublisher/follow_template/compare/1.1.1...1.1.2) (2023-01-20)
 
@@ -34,7 +46,7 @@
 
 * **release:** add file to follow
 
-
+---
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/ObsidianPublisher/follow_template/compare/1.1.0...1.1.1) (2023-01-20)
 
@@ -53,7 +65,7 @@
 
 * **mkdocs:** add comments on yaml
 
-
+---
 <a name="1.1.0"></a>
 ## [1.1.0](https://github.com/ObsidianPublisher/follow_template/compare/1.0.1...1.1.0) (2023-01-20)
 
@@ -75,7 +87,7 @@
 
 * **comments:** whitespace
 
-
+---
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/ObsidianPublisher/follow_template/compare/1.0.0...1.0.1) (2023-01-20)
 
@@ -93,15 +105,15 @@
 
 * fix to main
 
-
+---
 <a name="1.0.0"></a>
 ## [1.0.0](https://github.com/ObsidianPublisher/follow_template/compare/0.0.2...1.0.0) (2023-01-20)
 
-
+---
 <a name="0.0.2"></a>
 ## [0.0.2](https://github.com/ObsidianPublisher/follow_template/compare/0.0.1...0.0.2) (2023-01-20)
 
-
+---
 <a name="0.0.1"></a>
 ## 0.0.1 (2023-01-20)
 
