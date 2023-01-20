@@ -1,0 +1,6 @@
+[submodule "publisher-template-gh-pages"]
+	path = publisher-template-gh-pages
+	url = https://github.com/ObsidianPublisher/publisher-template-gh-pages
+[submodule "publisher-template-netlify"]
+	path = publisher-template-netlify
+	url = https://github.com/ObsidianPublisher/publisher-template-netlify
