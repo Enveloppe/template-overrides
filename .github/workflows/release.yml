@@ -33,10 +33,28 @@ jobs:
           npx rexreplace "^.*?#+\s\[.*?\n.*?(?=\s*#+\s\[)" "_" -s -M -G -m -o "CHANGELOG.md" > body_changelog.md
           echo "## Edited files" > CHANGELOG-LATEST.md
           echo "" >> CHANGELOG-LATEST.md
-          for file in ${{ steps.changed-files.outputs.all }}; do
+          echo "### Added" >> CHANGELOG-LATEST.md
+          echo "" >> CHANGELOG-LATEST.md
+          for file in ${{ steps.changed-files.outputs.added }}; do
+            echo "- $file" >> CHANGELOG-LATEST.md
+          done
+          echo "### Modified" >> CHANGELOG-LATEST.md
+          echo "" >> CHANGELOG-LATEST.md
+          for file in ${{ steps.changed-files.outputs.modified }}; do
+            echo "- $file" >> CHANGELOG-LATEST.md
+          done
+          echo "### Removed" >> CHANGELOG-LATEST.md
+          echo "" >> CHANGELOG-LATEST.md
+          for file in ${{ steps.changed-files.outputs.removed }}; do
+            echo "- $file" >> CHANGELOG-LATEST.md
+          done
+          echo "### Renamed" >> CHANGELOG-LATEST.md
+          echo "" >> CHANGELOG-LATEST.md
+          for file in ${{ steps.changed-files.outputs.renamed }}; do
             echo "- $file" >> CHANGELOG-LATEST.md
           done
           echo "" >> CHANGELOG-LATEST.md
+          echo "---" >> CHANGELOG-LATEST.md
           echo "## Changelog" >> CHANGELOG-LATEST.md
           echo "" >> CHANGELOG-LATEST.md
           cat body_changelog.md >> CHANGELOG-LATEST.md
