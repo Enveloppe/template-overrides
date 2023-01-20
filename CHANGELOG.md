@@ -1,6 +1,18 @@
 
-<a name="v1.1.2"></a>
-## [v1.1.2](https://github.com/ObsidianPublisher/follow_template/compare/1.1.1...v1.1.2) (2023-01-20)
+<a name="v1.1.3"></a>
+## [v1.1.3](https://github.com/ObsidianPublisher/follow_template/compare/1.1.2...v1.1.3) (2023-01-20)
+
+### Chore
+
+* **bump:** v1.1.2
+
+### Ci
+
+* **release:** fix github token
+
+
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/ObsidianPublisher/follow_template/compare/1.1.1...1.1.2) (2023-01-20)
 
 ### Chore
 
