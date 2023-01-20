@@ -1,6 +1,18 @@
 ---
-<a name="v0.0.0"></a>
-## v0.0.0 (2023-01-20)
+<a name="v0.0.1"></a>
+## [v0.0.1](https://github.com/ObsidianPublisher/follow_template/compare/0.0.0...v0.0.1) (2023-01-20)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Test
+
+* test
+
+---
+<a name="0.0.0"></a>
+## 0.0.0 (2023-01-20)
 
 ### Chore
 
