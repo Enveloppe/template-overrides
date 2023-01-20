@@ -1,7 +1,7 @@
 group:
   - files:
     - source: mkdocs_ref.yml
-      destination: mkdocs.yml
+      dest: mkdocs.yml
     repos: |
       ObsidianPublisher/publisher-template-gh-pages
       ObsidianPublisher/publisher-template-netlify
