@@ -1,0 +1,21 @@
+name: Sync Files
+on: 
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Sync files
+        uses: BetaHuhn/repo-file-sync-action@latest
+        with:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          SKIP_PR: true
+          COMMIT_PREFIX: "[SYNC]"
+          ORIGINAL_MESSAGE: true
+
