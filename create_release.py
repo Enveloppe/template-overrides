@@ -7,10 +7,14 @@ def create_tag(tag_name: str):
     repo = Repo(os.path.dirname(os.path.realpath(__file__)))
     tag = repo.create_tag(tag_name, message=f"chore(bump): v{tag_name}")
     print(f"Tag {tag_name} created")
-    # commit
-    repo.git.add(update=True)
-    repo.index.commit(f"chore(bump): v{tag_name}")
-    repo.remotes.origin.push(tag.path)
+    # commit changelog
+    repo.git.add("CHANGELOG.md")
+    repo.index.commit("chore(changelog): update changelog")
+    print("Changelog updated")
+    # push tag
+    origin = repo.remote(name="origin")
+    origin.push(tag)
+    print("Tag pushed to origin")
 
 def generate_changelog(version: str):
     print(f"Generating changelog for version {version}")
