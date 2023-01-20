@@ -17,6 +17,7 @@ def generate_changelog(version: str):
     os.system(f"git-chglog --next-tag v{version} --output CHANGELOG.md")
 
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("version", help="Version to create tag for")
