@@ -16,24 +16,25 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Get changed files since the last tags
+      - name: Get Base SHA
+        id: get-base-sha
+        run: |
+          echo "base_sha=$(git rev-parse "$(git tag --sort=-v:refname | head -n 2 | tail -n 1)")" >> $GITHUB_OUTPUT
+      - name: Get Changed Files
         id: changed-files
-        uses: jsmith/changes-since-last-tag@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with: 
-          glob: |
+        uses: tj-actions/changed-files@main
+        with:
+          base_sha: ${{ steps.get-base-sha.outputs.base_sha }}
+          files: |
             mkdocs.yml
             docs/**
             overrides/**
-            find_unused_media.py
             .github/workflows/create_index.yml
-            mkdocs.yml
       - name: create zip of changed files
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
           mkdir -p changed_files
-          for file in ${{ steps.changed-files.outputs.files }}; do
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             mkdir -p changed_files/$(dirname $file)
             cp $file changed_files/$file
           done
@@ -45,22 +46,22 @@ jobs:
           echo "" >> CHANGELOG-LATEST.md
           echo "### Added" >> CHANGELOG-LATEST.md
           echo "" >> CHANGELOG-LATEST.md
-          for file in ${{ steps.changed-files.outputs.added }}; do
+          for file in ${{ steps.changed-files.outputs.added_files }}; do
             echo "- $file" >> CHANGELOG-LATEST.md
           done
           echo "### Modified" >> CHANGELOG-LATEST.md
           echo "" >> CHANGELOG-LATEST.md
-          for file in ${{ steps.changed-files.outputs.modified }}; do
+          for file in ${{ steps.changed-files.outputs.modified_files }}; do
             echo "- $file" >> CHANGELOG-LATEST.md
           done
           echo "### Removed" >> CHANGELOG-LATEST.md
           echo "" >> CHANGELOG-LATEST.md
-          for file in ${{ steps.changed-files.outputs.removed }}; do
+          for file in ${{ steps.changed-files.outputs.deleted_files }}; do
             echo "- $file" >> CHANGELOG-LATEST.md
           done
           echo "### Renamed" >> CHANGELOG-LATEST.md
           echo "" >> CHANGELOG-LATEST.md
-          for file in ${{ steps.changed-files.outputs.renamed }}; do
+          for file in ${{ steps.changed-files.outputs.renamed_files }}; do
             echo "- $file" >> CHANGELOG-LATEST.md
           done
           echo "" >> CHANGELOG-LATEST.md
