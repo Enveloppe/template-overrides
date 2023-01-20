@@ -1,6 +1,15 @@
 ---
-<a name="v1.1.5"></a>
-## [v1.1.5](https://github.com/ObsidianPublisher/follow_template/compare/1.1.4...v1.1.5) (2023-01-20)
+<a name="v1.1.6"></a>
+## [v1.1.6](https://github.com/ObsidianPublisher/follow_template/compare/1.1.5...v1.1.6) (2023-01-20)
+
+### Chore
+
+* **changelog:** update changelog
+* **environment:** add environment.yml
+
+---
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/ObsidianPublisher/follow_template/compare/1.1.4...1.1.5) (2023-01-20)
 
 ### Chore
 
