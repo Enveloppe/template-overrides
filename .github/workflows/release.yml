@@ -19,6 +19,8 @@ jobs:
       - name: Get changed files since the last tags
         id: changed-files
         uses: jsmith/changes-since-last-tag@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with: 
           glob: |
             mkdocs.yml
