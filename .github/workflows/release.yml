@@ -28,7 +28,7 @@ jobs:
             cp $file changed_files/$file
           done
           zip -r changed_files.zip changed_files
-      - name: create list of edited files
+      - name: create changelog
         run: |
           npx rexreplace "^.*?#+\s\[.*?\n.*?(?=\s*#+\s\[)" "_" -s -M -G -m -o "CHANGELOG.md" > body_changelog.md
           echo "## Edited files" > CHANGELOG-LATEST.md
