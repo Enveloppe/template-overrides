@@ -1,33 +1,23 @@
 ---
-<a name="v0.0.2"></a>
-## [v0.0.2](https://github.com/ObsidianPublisher/follow_template/compare/0.0.1...v0.0.2) (2023-01-20)
+<a name="v0.0.1"></a>
+## v0.0.1 (2023-01-20)
 
 ### Chore
 
-* **changelog:** update changelog
-
-### Test
-
-* test release.yml
-
----
-<a name="0.0.1"></a>
-## 0.0.1 (2023-01-20)
-
-### Chore
-
-* follow mkdocs.yml too
 * submodule update
 * update submodule
 * sync files
 * fix sync
+* follow mkdocs.yml too
+* **bump:** v1.1.2
 * **bump:** v1.0.1
 * **bump:** v1.1.0
+* **bump:** v1.1.1
 * **bump:** v1.1.4
 * **bump:** v1.1.3
-* **bump:** v1.1.2
-* **bump:** v1.1.1
 * **bump:** v1.0.0
+* **changelog:** update changelog
+* **changelog:** update changelog
 * **changelog:** update changelog
 * **changelog:** update changelog
 * **changelog:** update changelog
@@ -40,6 +30,7 @@
 * update changelog template
 * update changelog process
 * **create_release:** prevent error, I guess ?
+* **release:** change release workflows, again
 * **release:** add file to follow
 * **release:** rename steps
 * **release:** better changelog
@@ -67,4 +58,8 @@
 ### Style
 
 * **comments:** whitespace
+
+### Test
+
+* test release.yml
 
