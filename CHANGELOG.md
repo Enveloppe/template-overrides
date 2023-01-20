@@ -1,6 +1,22 @@
 ---
-<a name="v0.0.2"></a>
-## [v0.0.2](https://github.com/ObsidianPublisher/follow_template/compare/0.0.1...v0.0.2) (2023-01-20)
+<a name="v0.0.3"></a>
+## [v0.0.3](https://github.com/ObsidianPublisher/follow_template/compare/0.0.2...v0.0.3) (2023-01-20)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Ci
+
+* release workflows with link to edited files
+
+### Feat
+
+* add dry run for find unused media
+
+---
+<a name="0.0.2"></a>
+## [0.0.2](https://github.com/ObsidianPublisher/follow_template/compare/0.0.1...0.0.2) (2023-01-20)
 
 ### Chore
 
