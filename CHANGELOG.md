@@ -1,122 +1,51 @@
 ---
-<a name="v1.1.8"></a>
-## [v1.1.8](https://github.com/ObsidianPublisher/follow_template/compare/1.1.7...v1.1.8) (2023-01-20)
-
-### Chore
-
-* **changelog:** update changelog
-
-### Fix
-
-* push to origin with python
-
----
-<a name="1.1.7"></a>
-## [1.1.7](https://github.com/ObsidianPublisher/follow_template/compare/1.1.6...1.1.7) (2023-01-20)
-
-### Chore
-
-* **changelog:** update changelog
-
-### Fix
-
-* error in release
-
----
-<a name="1.1.6"></a>
-## [1.1.6](https://github.com/ObsidianPublisher/follow_template/compare/1.1.5...1.1.6) (2023-01-20)
-
-### Chore
-
-* **changelog:** update changelog
-* **environment:** add environment.yml
-
----
-<a name="1.1.5"></a>
-## [1.1.5](https://github.com/ObsidianPublisher/follow_template/compare/1.1.4...1.1.5) (2023-01-20)
-
-### Chore
-
-* follow mkdocs.yml too
-* **bump:** v1.1.4
-
-### Ci
-
-* update changelog template
-* **create_release:** prevent error, I guess ?
-
-### Docs
-
-* testing the release template with some comments on the mkdocs.yml
-
----
-<a name="1.1.4"></a>
-## [1.1.4](https://github.com/ObsidianPublisher/follow_template/compare/1.1.3...1.1.4) (2023-01-20)
-
-### Chore
-
-* **bump:** v1.1.3
-
-### Docs
-
-* **mkdocs:** add more info about blog_list
-
----
-<a name="1.1.3"></a>
-## [1.1.3](https://github.com/ObsidianPublisher/follow_template/compare/1.1.2...1.1.3) (2023-01-20)
-
-### Chore
-
-* **bump:** v1.1.2
-
-### Ci
-
-* **release:** fix github token
-
----
-<a name="1.1.2"></a>
-## [1.1.2](https://github.com/ObsidianPublisher/follow_template/compare/1.1.1...1.1.2) (2023-01-20)
-
-### Chore
-
-* **bump:** v1.1.1
-
-### Ci
-
-* **release:** add file to follow
-
----
-<a name="1.1.1"></a>
-## [1.1.1](https://github.com/ObsidianPublisher/follow_template/compare/1.1.0...1.1.1) (2023-01-20)
-
-### Chore
-
-* **bump:** v1.1.0
-
-### Ci
-
-* **release:** rename steps
-* **release:** better changelog
-* **release:** remove glob
-* **release:** use a better methods to do release since tags
-
-### Docs
-
-* **mkdocs:** add comments on yaml
-
----
-<a name="1.1.0"></a>
-## [1.1.0](https://github.com/ObsidianPublisher/follow_template/compare/1.0.1...1.1.0) (2023-01-20)
+<a name="v1.0.0"></a>
+## v1.0.0 (2023-01-20)
 
 ### Chore
 
 * fix sync
+* submodule update
+* update submodule
 * sync files
+* follow mkdocs.yml too
 * **bump:** v1.0.1
+* **bump:** v1.1.4
+* **bump:** v1.1.3
+* **bump:** v1.1.2
+* **bump:** v1.1.1
+* **bump:** v1.1.0
+* **bump:** v1.0.0
+* **changelog:** update changelog
+* **changelog:** update changelog
+* **changelog:** update changelog
+* **changelog:** update changelog
+* **environment:** add environment.yml
 
 ### Ci
 
+* update changelog template
 * update changelog process
+* **create_release:** prevent error, I guess ?
+* **release:** add file to follow
+* **release:** rename steps
+* **release:** better changelog
+* **release:** remove glob
+* **release:** use a better methods to do release since tags
+* **release:** fix github token
+* **release:** Update release script to use new release process
+
+### Docs
+
+* testing the release template with some comments on the mkdocs.yml
+* **mkdocs:** add more info about blog_list
+* **mkdocs:** add comments on yaml
+
+### Fix
+
+* push to origin with python
+* error in release
+* fix to main
 
 ### Refactor
 
@@ -125,34 +54,4 @@
 ### Style
 
 * **comments:** whitespace
-
----
-<a name="1.0.1"></a>
-## [1.0.1](https://github.com/ObsidianPublisher/follow_template/compare/1.0.0...1.0.1) (2023-01-20)
-
-### Chore
-
-* update submodule
-* submodule update
-* **bump:** v1.0.0
-
-### Ci
-
-* **release:** Update release script to use new release process
-
-### Fix
-
-* fix to main
-
----
-<a name="1.0.0"></a>
-## [1.0.0](https://github.com/ObsidianPublisher/follow_template/compare/0.0.2...1.0.0) (2023-01-20)
-
----
-<a name="0.0.2"></a>
-## [0.0.2](https://github.com/ObsidianPublisher/follow_template/compare/0.0.1...0.0.2) (2023-01-20)
-
----
-<a name="0.0.1"></a>
-## 0.0.1 (2023-01-20)
 
