@@ -5,7 +5,7 @@ group:
     - source: template/js
       dest: docs/assets/js
     - source: template/css
-      dest: docs/assets/template/css
+      dest: docs/assets/css/template
     - source: template/overrides
       dest: overrides
     - source: .github/workflows/create_index.yml
