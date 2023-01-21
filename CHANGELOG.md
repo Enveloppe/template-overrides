@@ -1,6 +1,30 @@
 ---
-<a name="v0.0.1"></a>
-## [v0.0.1](https://github.com/ObsidianPublisher/follow_template/compare/0.0.0...v0.0.1) (2023-01-20)
+<a name="v0.0.2"></a>
+## [v0.0.2](https://github.com/ObsidianPublisher/follow_template/compare/0.0.1...v0.0.2) (2023-01-21)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Ci
+
+* Remove mkdocs.yml to prevent error
+* adding auto_update workflow note : set the automerging env to true to enable auto merging PR
+
+### Docs
+
+* add info on auto update
+* Add info about changed file
+
+### Fix
+
+* path to auto_update.yml
+* path to auto_update workflow
+* bad method to update repository
+
+---
+<a name="0.0.1"></a>
+## [0.0.1](https://github.com/ObsidianPublisher/follow_template/compare/0.0.0...0.0.1) (2023-01-20)
 
 ### Chore
 
