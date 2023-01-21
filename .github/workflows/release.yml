@@ -31,6 +31,7 @@ jobs:
             overrides/**
             .github/workflows/create_index.yml
             find_unused_media.py
+            auto_update.yml
       - name: create zip of changed files
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
@@ -43,6 +44,10 @@ jobs:
           cd changed_files
           zip -r changed_files.zip .
           mv changed_files.zip ../
+          cd ..
+      - name: Create zip of all files 
+        run : |
+          zip -r release.zip docs/ overrides/ .github/workflows/create_index.yml find_unused_media.py auto_update.yml
       - name: create changelog
         run: |
           npx rexreplace "^.*?#+\s\[.*?\n.*?(?=\s*#+\s\[)" "_" -s -M -G -m -o "CHANGELOG.md" > body_changelog.md
@@ -90,6 +95,7 @@ jobs:
             README.md
             CHANGELOG.md
             LICENSE
+            release.zip
             changed_files.zip
         
 
