@@ -5,7 +5,7 @@ from git import Repo
 
 def create_tag(tag_name: str):
     repo = Repo(os.path.dirname(os.path.realpath(__file__)))
-    tag = repo.create_tag(tag_name, message=f"chore(bump): v{tag_name}")
+    repo.create_tag(tag_name, message=f"chore(bump): v{tag_name}")
     print(f"Tag {tag_name} created")
     # commit changelog
     repo.git.add("CHANGELOG.md")
@@ -13,6 +13,7 @@ def create_tag(tag_name: str):
     print("Changelog updated")
     # push tag
     origin = repo.remote(name="origin")
+    origin.push(tag_name)
     origin.push()
     print("Tag pushed to origin")
 
