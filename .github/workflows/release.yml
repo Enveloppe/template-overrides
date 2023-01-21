@@ -31,7 +31,7 @@ jobs:
             overrides/**
             .github/workflows/create_index.yml
             find_unused_media.py
-            auto_update.yml
+            .github/workflows/auto_update.yml
       - name: create zip of changed files
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
