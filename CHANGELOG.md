@@ -1,6 +1,24 @@
 ---
-<a name="v0.0.2"></a>
-## [v0.0.2](https://github.com/ObsidianPublisher/follow_template/compare/0.0.1...v0.0.2) (2023-01-21)
+<a name="v0.0.3"></a>
+## [v0.0.3](https://github.com/ObsidianPublisher/follow_template/compare/0.0.2...v0.0.3) (2023-01-21)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Ci
+
+* remove snippets file
+* add snippets
+* add mermaid configuration
+
+### Fix
+
+* tag not pushed
+
+---
+<a name="0.0.2"></a>
+## [0.0.2](https://github.com/ObsidianPublisher/follow_template/compare/0.0.1...0.0.2) (2023-01-21)
 
 ### Chore
 
