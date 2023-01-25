@@ -1,6 +1,20 @@
 ---
-<a name="v0.0.6"></a>
-## [v0.0.6](https://github.com/ObsidianPublisher/follow_template/compare/0.0.5...v0.0.6) (2023-01-25)
+<a name="v0.0.7"></a>
+## [v0.0.7](https://github.com/ObsidianPublisher/follow_template/compare/0.0.6...v0.0.7) (2023-01-25)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Fix
+
+* changing workflow name
+* dotenv .env folder
+* path
+
+---
+<a name="0.0.6"></a>
+## [0.0.6](https://github.com/ObsidianPublisher/follow_template/compare/0.0.5...0.0.6) (2023-01-25)
 
 ### Chore
 
