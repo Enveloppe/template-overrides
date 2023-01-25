@@ -1,6 +1,18 @@
 ---
-<a name="v0.0.5"></a>
-## [v0.0.5](https://github.com/ObsidianPublisher/follow_template/compare/0.0.4...v0.0.5) (2023-01-25)
+<a name="v0.0.6"></a>
+## [v0.0.6](https://github.com/ObsidianPublisher/follow_template/compare/0.0.5...v0.0.6) (2023-01-25)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Fix
+
+* OSError
+
+---
+<a name="0.0.5"></a>
+## [0.0.5](https://github.com/ObsidianPublisher/follow_template/compare/0.0.4...0.0.5) (2023-01-25)
 
 ### Chore
 
