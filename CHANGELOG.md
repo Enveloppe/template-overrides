@@ -1,6 +1,22 @@
 ---
-<a name="v0.0.3"></a>
-## [v0.0.3](https://github.com/ObsidianPublisher/follow_template/compare/0.0.2...v0.0.3) (2023-01-21)
+<a name="v0.0.4"></a>
+## [v0.0.4](https://github.com/ObsidianPublisher/follow_template/compare/0.0.3...v0.0.4) (2023-01-25)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Fix
+
+* better if
+
+### Refactor
+
+* create css folder with blank file
+
+---
+<a name="0.0.3"></a>
+## [0.0.3](https://github.com/ObsidianPublisher/follow_template/compare/0.0.2...0.0.3) (2023-01-21)
 
 ### Chore
 
