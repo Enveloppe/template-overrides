@@ -12,10 +12,14 @@ def create_tag(tag_name: str):
     repo.index.commit("chore(changelog): update changelog")
     print("Changelog updated")
     # push tag
-    origin = repo.remote(name="origin")
-    origin.push(tag_name)
-    origin.push()
-    print("Tag pushed to origin")
+    try:
+        origin = repo.remote(name="origin")
+        origin.push(tag_name)
+        origin.push()
+        print("Tag pushed to origin")
+    except OSError:
+        os.system(f"git push --atomic origin main {tag_name}")
+    
 
 def generate_changelog(version: str):
     print(f"Generating changelog for version {version}")
