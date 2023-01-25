@@ -6,19 +6,18 @@ group:
     - find_unused_media.py
     - .github/workflows/create_index.yml
     - .github/workflows/auto_update.yml
-    - source: .github/workflows/reload_clean.yml
-      dest: .github/workflows/reload_clean.yml
-      repos: |
-        ObsidianPublisher/publisher-template-gh-pages
-        ObsidianPublisher/publisher-template-netlify
-    - source: .github/.env_netlify
-      dest: .github/.env
-      repos: |
-        ObsidianPublisher/publisher-template-netlify
-    - source: .github/.env_gh-pages
-      dest: .github/.env
-      repos: |
-        ObsidianPublisher/publisher-template-gh-pages
+    - .github/workflows/update_req_clean_medias.yml
     repos: |
       ObsidianPublisher/publisher-template-gh-pages
       ObsidianPublisher/publisher-template-netlify
+  - files:
+    - source: .github/.env_netlify
+      dest: .github/.env
+    repos: |
+      ObsidianPublisher/publisher-template-netlify
+      ObsidianPublisher/obsidian-mkdocs-publisher-docs
+  - files:
+    - source: .github/.env_gh-pages
+      dest: .github/.env
+    repos: |
+      ObsidianPublisher/publisher-template-gh-pages
