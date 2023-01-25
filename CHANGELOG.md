@@ -1,6 +1,19 @@
 ---
-<a name="v0.0.7"></a>
-## [v0.0.7](https://github.com/ObsidianPublisher/follow_template/compare/0.0.6...v0.0.7) (2023-01-25)
+<a name="v0.0.8"></a>
+## [v0.0.8](https://github.com/ObsidianPublisher/follow_template/compare/0.0.7...v0.0.8) (2023-01-25)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Fix
+
+* and condition doesn't work
+* dotenv version
+
+---
+<a name="0.0.7"></a>
+## [0.0.7](https://github.com/ObsidianPublisher/follow_template/compare/0.0.6...0.0.7) (2023-01-25)
 
 ### Chore
 
