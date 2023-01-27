@@ -56,13 +56,13 @@ jobs:
         uses: actions/cache@v3
         with:
           path: venv
-          key: pip-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('requirements_action.txt') }}
+          key: pip-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('requirements-actions.txt') }}
       - name: Update cache
         if: needs.check-env.outputs.GENERATE_GRAPH == 'true' && steps.python_cache.outputs.cache-hit != 'true'
         run: |
           python -m venv venv
           source venv/bin/activate
-          pip install -r requirements_action.txt
+          pip install -r requirements-actions.txt
       - name: Generate graph
         if: needs.check-env.outputs.GENERATE_GRAPH == 'true'
         run: |
