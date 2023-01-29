@@ -1,0 +1,152 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths: 
+      - 'README.md'
+      - 'overrides/**'
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - 'requirements.txt'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  check-env:
+    runs-on: ubuntu-latest
+    outputs: 
+      WORKFLOW_TYPE: ${{ steps.check-env.outputs.WORKFLOW_TYPE }}
+      GENERATE_GRAPH: ${{ steps.check-env.outputs.GENERATE_GRAPH }}
+      ACTIONS_REQUIREMENTS: ${{ steps.check-env.outputs.ACTIONS_REQUIREMENTS }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get .env file
+        uses: xom9ikk/dotenv@v2.1.0
+        with:
+          path: .github
+          load_mode: strict
+      - name: send to output
+        id: check-env
+        run: |
+          echo "WORKFLOW_TYPE=${{ env.WORKFLOW_TYPE }}" >> $GITHUB_OUTPUT
+          echo "GENERATE_GRAPH=${{ env.GENERATE_GRAPH }}" >> $GITHUB_OUTPUT
+          echo "ACTIONS_REQUIREMENTS=${{ env.ACTIONS_REQUIREMENTS }}" >> $GITHUB_OUTPUT
+  generate_graph:
+    needs: check-env
+    runs-on: ubuntu-latest
+    if: ${{ needs.check-env.outputs.ACTIONS_REQUIREMENTS == 'true' && needs.check-env.outputs.GENERATE_GRAPH == 'true' }}
+    steps:
+      - uses: actions/checkout@v3
+      - id: setup_python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Check python cache
+        if: needs.check-env.outputs.GENERATE_GRAPH == 'true' 
+        id: python_cache
+        uses: actions/cache@v3
+        with:
+          path: venv-other
+          key: pip-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('requirements-actions.txt') }}
+      - name: Update cache
+        if: needs.check-env.outputs.GENERATE_GRAPH == 'true' && steps.python_cache.outputs.cache-hit != 'true'
+        run: |
+          if [ -d "venv-other" ]; then rm -rf venv-other; fi
+          python -m venv venv-other
+          source venv-other/bin/activate
+          pip install -r requirements-actions.txt
+      - name: Generate graph
+        if: needs.check-env.outputs.GENERATE_GRAPH == 'true'
+        run: |
+          source venv-other/bin/activate
+          python generate_graph.py
+      - name: Push generated graph
+        if: needs.check-env.outputs.GENERATE_GRAPH == 'true'
+        continue-on-error: true
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@users.noreply.github.com'
+          git add .
+          git commit -am "[skip netlify] Update generated graph"
+          git push
+  netlify:
+    needs: [check-env, generate_graph]
+    runs-on: ubuntu-latest
+    if: needs.check-env.outputs.WORKFLOW_TYPE == 'netlify' && always()
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Deploy to Netlify
+        run: |
+          curl -X POST -d {} ${{ secrets.NETLIFY_HOOK }}
+  vercel:
+    needs: [check-env, generate_graph]
+    if: needs.check-env.outputs.WORKFLOW_TYPE == 'vercel' && always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+      - name: Deploy
+        run: |
+          npx vercel --token ${VERCEL_TOKEN} --prod
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+
+  gh_pages:
+    runs-on: ubuntu-latest
+    needs: check-env
+    if: needs.check-env.outputs.WORKFLOW_TYPE == 'gh-pages'
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - id: setup_python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - id: python_cache
+        name: Check python cache
+        uses: actions/cache@v3
+        with:
+          path: venv
+          key: pip-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
+      - if: steps.python_cache.outputs.cache-hit != 'true'
+        name: Recreate python cache
+        run: |
+          if [ -d "venv" ]; then rm -rf venv; fi
+          python3 -m venv venv
+          venv/bin/python3 -m pip install -r requirements.txt
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Mkdocs build
+        run: |
+          venv/bin/python3 -m mkdocs build
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./site
+  deploy:
+    if: needs.check-env.outputs.WORKFLOW_TYPE == 'gh-pages'
+    needs: [gh_pages, check-env]
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
