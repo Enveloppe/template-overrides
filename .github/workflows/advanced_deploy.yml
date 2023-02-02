@@ -54,14 +54,14 @@ jobs:
         uses: actions/cache@v3
         with:
           path: venv-other
-          key: pip-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('requirements-actions.txt') }}
+          key: pip-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('requirements_actions.txt') }}
       - name: Update cache
         if: needs.check-env.outputs.GENERATE_GRAPH == 'true' && steps.python_cache.outputs.cache-hit != 'true'
         run: |
           if [ -d "venv-other" ]; then rm -rf venv-other; fi
           python -m venv venv-other
           source venv-other/bin/activate
-          pip install -r requirements-actions.txt
+          pip install -r requirements_actions.txt
       - name: Generate graph
         if: needs.check-env.outputs.GENERATE_GRAPH == 'true'
         run: |
