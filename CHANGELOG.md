@@ -1,6 +1,30 @@
 ---
-<a name="v0.0.10"></a>
-## [v0.0.10](https://github.com/ObsidianPublisher/follow_template/compare/0.0.9...v0.0.10) (2023-02-26)
+<a name="v1.1.0"></a>
+## [v1.1.0](https://github.com/ObsidianPublisher/follow_template/compare/1.0.0...v1.1.0) (2023-03-15)
+
+### Chore
+
+* **changelog:** update changelog
+
+---
+<a name="1.0.0"></a>
+## [1.0.0](https://github.com/ObsidianPublisher/follow_template/compare/0.1.0...1.0.0) (2023-03-15)
+
+### Chore
+
+* **changelog:** update changelog
+
+---
+<a name="0.1.0"></a>
+## [0.1.0](https://github.com/ObsidianPublisher/follow_template/compare/0.0.10...0.1.0) (2023-03-14)
+
+### Chore
+
+* **changelog:** update changelog
+
+---
+<a name="0.0.10"></a>
+## [0.0.10](https://github.com/ObsidianPublisher/follow_template/compare/0.0.9...0.0.10) (2023-02-26)
 
 ### Chore
 
