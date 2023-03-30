@@ -1,6 +1,22 @@
 ---
-<a name="v1.1.0"></a>
-## [v1.1.0](https://github.com/ObsidianPublisher/follow_template/compare/1.0.0...v1.1.0) (2023-03-15)
+<a name="v1.2.0"></a>
+## [v1.2.0](https://github.com/ObsidianPublisher/follow_template/compare/1.1.0...v1.2.0) (2023-03-30)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Feat
+
+* adding no-auto-h1 remove the autogeneration of H1 if none as been found
+
+### Fix
+
+* mermaid duplicate between Material & plugin
+
+---
+<a name="1.1.0"></a>
+## [1.1.0](https://github.com/ObsidianPublisher/follow_template/compare/1.0.0...1.1.0) (2023-03-15)
 
 ### Chore
 
