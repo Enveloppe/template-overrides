@@ -1,0 +1,84 @@
+{
+  "github": {
+    "branch": "main",
+    "automaticallyMergePR": true,
+    "api": {
+      "tiersForApi": "Github Free/Pro/Team (default)",
+      "hostname": ""
+    },
+    "worflow": {
+      "workflowName": "",
+      "customCommitMsg": "MERGE PUBLISHER"
+    }
+  },
+  "upload": {
+    "behavior": "yaml",
+    "subFolder": "",
+    "defaultName": "docs/hidden",
+    "rootFolder": "docs",
+    "yamlFolderKey": "category",
+    "frontmatterTitle": {
+      "enable": true,
+      "key": "name"
+    },
+    "replaceTitle": [],
+    "autoclean": {
+      "enable": true,
+      "excluded": [
+        "docs/assets/js",
+        "docs/assets/meta",
+        "docs/assets/css",
+        "tags.md",
+        "graph.md"
+      ]
+    },
+    "folderNote": {
+      "enable": true,
+      "rename": "index.md"
+    },
+    "metadataExtractorPath": "",
+    "replacePath": []
+  },
+  "conversion": {
+    "hardbreak": false,
+    "dataview": false,
+    "censorText": [],
+    "tags": {
+      "inline": true,
+      "exclude": [],
+      "fields": []
+    },
+    "links": {
+      "internal": true,
+      "unshared": false,
+      "wiki": false
+    }
+  },
+  "embed": {
+    "attachments": true,
+    "keySendFile": [
+      "image"
+    ],
+    "notes": true,
+    "folder": "docs/assets/img"
+  },
+  "plugin": {
+    "shareKey": "share",
+    "fileMenu": true,
+    "editorMenu": true,
+    "excludedFolder": [],
+    "externalShare": false,
+    "copyLink": {
+      "enable": true,
+      "links": "",
+      "removePart": [
+        "docs/",
+        ".md",
+        "index"
+      ],
+      "addCmd": true
+    },
+    "noticeError": false,
+    "displayModalRepoEditing": false
+  }
+}
