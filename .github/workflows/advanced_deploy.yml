@@ -86,8 +86,12 @@ jobs:
           fetch-depth: 0
       - name: Deploy to Netlify
         run: |
-          rm Pipfile.lock
-          rm Pipfile
+          if [ -f "Pipfile.lock" ]; then
+            rm Pipfile.lock
+          fi
+          if [ -f "Pipfile" ]; then
+            rm Pipfile
+          fi
           curl -X POST -d {} ${{ secrets.NETLIFY_HOOK }}
   vercel:
     needs: [check-env, generate_graph]
