@@ -1,4 +1,4 @@
-name: CI
+name: Deploy to Pages
 
 on:
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Get .env file
-        uses: xom9ikk/dotenv@v2.1.0
+        uses: xom9ikk/dotenv@v2
         with:
           path: .github
           load_mode: strict
@@ -86,6 +86,8 @@ jobs:
           fetch-depth: 0
       - name: Deploy to Netlify
         run: |
+          rm pipfile.lock
+          rm pipfile
           curl -X POST -d {} ${{ secrets.NETLIFY_HOOK }}
   vercel:
     needs: [check-env, generate_graph]
