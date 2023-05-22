@@ -1,6 +1,25 @@
 ---
-<a name="v1.2.0"></a>
-## [v1.2.0](https://github.com/ObsidianPublisher/follow_template/compare/1.1.0...v1.2.0) (2023-03-30)
+<a name="v2.0.0"></a>
+## [v2.0.0](https://github.com/ObsidianPublisher/follow_template/compare/1.2.0...v2.0.0) (2023-05-22)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Fix
+
+* Too many XHR Request
+* configure-page v3
+* translation to english the encryptcontent plugin
+
+### BREAKING CHANGE
+
+
+File not found won't work until you add the new hooks on_files.py
+
+---
+<a name="1.2.0"></a>
+## [1.2.0](https://github.com/ObsidianPublisher/follow_template/compare/1.1.0...1.2.0) (2023-03-30)
 
 ### Chore
 
