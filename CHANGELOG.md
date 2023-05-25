@@ -1,6 +1,14 @@
 ---
-<a name="v2.0.2"></a>
-## [v2.0.2](https://github.com/ObsidianPublisher/follow_template/compare/2.0.1...v2.0.2) (2023-05-22)
+<a name="v2.1.0"></a>
+## [v2.1.0](https://github.com/ObsidianPublisher/follow_template/compare/2.0.2...v2.1.0) (2023-05-25)
+
+### Chore
+
+* **changelog:** update changelog
+
+---
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/ObsidianPublisher/follow_template/compare/2.0.1...2.0.2) (2023-05-22)
 
 ### Chore
 
