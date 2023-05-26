@@ -37,38 +37,61 @@ jobs:
           echo "WORKFLOW_TYPE=${{ env.WORKFLOW_TYPE }}" >> $GITHUB_OUTPUT
           echo "GENERATE_GRAPH=${{ env.GENERATE_GRAPH }}" >> $GITHUB_OUTPUT
           echo "ACTIONS_REQUIREMENTS=${{ env.ACTIONS_REQUIREMENTS }}" >> $GITHUB_OUTPUT
+          echo "ACT (LOCAL RUN) = ${{ env.ACT }}"
   generate_graph:
     needs: check-env
     runs-on: ubuntu-latest
     if: ${{ needs.check-env.outputs.ACTIONS_REQUIREMENTS == 'true' && needs.check-env.outputs.GENERATE_GRAPH == 'true' }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v36
+        with:
+          files: |
+            docs/**/*.md
+      - name: check if new files
+        id: new-files
+        run: |
+          echo "Checking for new files"
+          echo "${{ steps.changed-files.outputs.added_files }}"
+          echo "${{ steps.changed-files.outputs.renamed_files }}"
+          if [ -n "${{ steps.changed-files.outputs.added_files }}" ] || [ -n "${{ steps.changed-files.outputs.renamed_files }}" ]; then
+              echo "New files found"
+              echo "NEW_FILES=TRUE" >> $GITHUB_OUTPUT
+          else
+              echo "No new files found"
+              echo "NEW_FILES=FALSE" >> $GITHUB_OUTPUT
+          fi
       - id: setup_python
         uses: actions/setup-python@v4
+        if: steps.new-files.outputs.NEW_FILES == 'TRUE'
         with:
           python-version: '3.11'
           cache: 'pip'
       - name: Check python cache
-        if: needs.check-env.outputs.GENERATE_GRAPH == 'true' 
+        if: steps.new-files.outputs.NEW_FILES == 'TRUE'
         id: python_cache
         uses: actions/cache@v3
         with:
           path: venv-other
           key: pip-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('requirements_actions.txt') }}
       - name: Update cache
-        if: needs.check-env.outputs.GENERATE_GRAPH == 'true' && steps.python_cache.outputs.cache-hit != 'true'
+        if: steps.new-files.outputs.NEW_FILES == 'TRUE' && steps.python_cache.outputs.cache-hit != 'true' 
         run: |
           if [ -d "venv-other" ]; then rm -rf venv-other; fi
           python -m venv venv-other
           source venv-other/bin/activate
           pip install -r requirements_actions.txt
       - name: Generate graph
-        if: needs.check-env.outputs.GENERATE_GRAPH == 'true'
+        if: steps.new-files.outputs.NEW_FILES == 'TRUE'
         run: |
           source venv-other/bin/activate
           python generate_graph.py
       - name: Push generated graph
-        if: needs.check-env.outputs.GENERATE_GRAPH == 'true'
+        if: ${{ steps.new-files.outputs.NEW_FILES == 'TRUE' && !env.ACT}}
         continue-on-error: true
         run: |
           git config --global user.name 'github-actions'
