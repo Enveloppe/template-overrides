@@ -1,6 +1,15 @@
 ---
-<a name="v2.1.0"></a>
-## [v2.1.0](https://github.com/ObsidianPublisher/follow_template/compare/2.0.2...v2.1.0) (2023-05-25)
+<a name="v2.2.0"></a>
+## [v2.2.0](https://github.com/ObsidianPublisher/follow_template/compare/2.1.0...v2.2.0) (2023-05-26)
+
+### Chore
+
+* **changelog:** update changelog
+* **gitignore:** ignore Pipfile
+
+---
+<a name="2.1.0"></a>
+## [2.1.0](https://github.com/ObsidianPublisher/follow_template/compare/2.0.2...2.1.0) (2023-05-25)
 
 ### Chore
 
