@@ -9,9 +9,8 @@ The release will contains multiple zip files :
     - `Docs` folder,
     - `overrides` folder,
     - `find_unused_media.py` script,
-    - `.github/workflows/create_index.yml` workflow,
-    - `.github/workflows/auto_update.yml` workflow,
 
+You can find workflows [here](https://github.com/ObsidianPublisher/actions). 
 
 ---
 Please : 
