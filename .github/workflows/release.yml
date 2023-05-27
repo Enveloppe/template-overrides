@@ -29,12 +29,7 @@ jobs:
             mkdocs.yml
             docs/**
             overrides/**
-            .github/workflows/create_index.yml
             find_unused_media.py
-            .github/workflows/auto_update.yml
-            .github/workflows/update_req_clean_medias.yml
-            .github/.env_netlify
-            .github/.env_gh-pages
       - name: create zip of changed files
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
@@ -50,7 +45,7 @@ jobs:
           cd ..
       - name: Create zip of all files 
         run : |
-          zip -r release.zip docs/ overrides/ .github/workflows/create_index.yml .github/workflows/auto_update.yml find_unused_media.py .github/workflows/update_req_clean_medias.yml
+          zip -r release.zip docs/ overrides/ find_unused_media.py 
       - name: create changelog
         run: |
           npx rexreplace "^.*?#+\s\[.*?\n.*?(?=\s*#+\s\[)" "_" -s -M -G -m -o "CHANGELOG.md" > body_changelog.md
@@ -100,5 +95,3 @@ jobs:
             LICENSE
             release.zip
             changed_files.zip
-        
-
