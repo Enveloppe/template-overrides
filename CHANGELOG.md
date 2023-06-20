@@ -1,6 +1,19 @@
 ---
-<a name="v2.2.0"></a>
-## [v2.2.0](https://github.com/ObsidianPublisher/follow_template/compare/2.1.0...v2.2.0) (2023-05-26)
+<a name="v2.3"></a>
+## [v2.3](https://github.com/ObsidianPublisher/follow_template/compare/2.2.0...v2.3) (2023-05-27)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Fix
+
+* duplicate comments
+* mathjax error with promise
+
+---
+<a name="2.2.0"></a>
+## [2.2.0](https://github.com/ObsidianPublisher/follow_template/compare/2.1.0...2.2.0) (2023-05-26)
 
 ### Chore
 
@@ -237,18 +250,18 @@ File not found won't work until you add the new hooks on_files.py
 
 ### Chore
 
+* follow mkdocs.yml too
+* submodule update
 * update submodule
 * sync files
 * fix sync
-* submodule update
-* follow mkdocs.yml too
 * **bump:** v1.0.0
 * **bump:** v1.0.1
+* **bump:** v1.1.0
 * **bump:** v1.1.1
 * **bump:** v1.1.2
 * **bump:** v1.1.3
 * **bump:** v1.1.4
-* **bump:** v1.1.0
 * **changelog:** update changelog
 * **changelog:** update changelog
 * **changelog:** update changelog
@@ -270,12 +283,12 @@ File not found won't work until you add the new hooks on_files.py
 * update changelog process
 * **create_release:** prevent error, I guess ?
 * **release:** change release workflows, again
+* **release:** fix github token
 * **release:** add file to follow
 * **release:** rename steps
 * **release:** better changelog
 * **release:** remove glob
 * **release:** use a better methods to do release since tags
-* **release:** fix github token
 * **release:** Update release script to use new release process
 
 ### Docs
