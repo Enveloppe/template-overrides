@@ -25,9 +25,15 @@ def generate_changelog(version: str):
     print(f"Generating changelog for version {version}")
     os.system(f"git-chglog --next-tag v{version} --output CHANGELOG.md")
 
+def generate_version_file(version: str):
+    print(f"Generating version file for version {version}")
+    with open("version.txt", "w") as f:
+        f.write(version)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("version", help="Version to create tag for")
     args = parser.parse_args()
     generate_changelog(args.version)
+    generate_version_file(args.version)
     create_tag(args.version)

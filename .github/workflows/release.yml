@@ -90,6 +90,7 @@ jobs:
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
           files: |
+            version.txt
             README.md
             CHANGELOG.md
             LICENSE
