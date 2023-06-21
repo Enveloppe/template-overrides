@@ -13,9 +13,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
+        uses: actions/setup-node@v3
       - name: Get Base SHA
         id: get-base-sha
         run: |
