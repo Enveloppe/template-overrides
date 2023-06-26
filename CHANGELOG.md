@@ -1,6 +1,18 @@
 ---
-<a name="v2.3.3"></a>
-## [v2.3.3](https://github.com/ObsidianPublisher/follow_template/compare/2.3.2...v2.3.3) (2023-06-26)
+<a name="v2.3.4"></a>
+## [v2.3.4](https://github.com/ObsidianPublisher/follow_template/compare/2.3.3...v2.3.4) (2023-06-26)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Refactor
+
+* add ruff
+
+---
+<a name="2.3.3"></a>
+## [2.3.3](https://github.com/ObsidianPublisher/follow_template/compare/2.3.2...2.3.3) (2023-06-26)
 
 ### Chore
 
