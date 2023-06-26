@@ -1,6 +1,18 @@
 ---
-<a name="v2.3.2"></a>
-## [v2.3.2](https://github.com/ObsidianPublisher/follow_template/compare/2.3.1...v2.3.2) (2023-06-26)
+<a name="v2.3.3"></a>
+## [v2.3.3](https://github.com/ObsidianPublisher/follow_template/compare/2.3.2...v2.3.3) (2023-06-26)
+
+### Chore
+
+* **changelog:** update changelog
+
+### Fix
+
+* version.txt not updated
+
+---
+<a name="2.3.2"></a>
+## [2.3.2](https://github.com/ObsidianPublisher/follow_template/compare/2.3.1...2.3.2) (2023-06-26)
 
 ### Chore
 
