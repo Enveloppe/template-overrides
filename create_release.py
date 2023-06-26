@@ -10,7 +10,8 @@ def create_tag(tag_name: str):
     # commit changelog
     repo.git.add("CHANGELOG.md")
     repo.index.commit("chore(changelog): update changelog")
-    print("Changelog updated")
+    repo.git.add("version.txt")
+    print("Changelog updated | Version file updated")
     # push tag
     try:
         origin = repo.remote(name="origin")
