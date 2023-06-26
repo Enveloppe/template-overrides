@@ -1,6 +1,25 @@
 ---
-<a name="v2.3.1"></a>
-## [v2.3.1](https://github.com/ObsidianPublisher/follow_template/compare/2.3...v2.3.1) (2023-06-20)
+<a name="v2.3.2"></a>
+## [v2.3.2](https://github.com/ObsidianPublisher/follow_template/compare/2.3.1...v2.3.2) (2023-06-26)
+
+### Chore
+
+* use pip file for dependencies
+* add pipfile
+* **changelog:** update changelog
+* **dep:** update setup node
+
+### Ci
+
+* rename version.txt to update.txt
+
+### Feat
+
+* use a version file to know when to update the template
+
+---
+<a name="2.3.1"></a>
+## [2.3.1](https://github.com/ObsidianPublisher/follow_template/compare/2.3...2.3.1) (2023-06-20)
 
 ### Chore
 
