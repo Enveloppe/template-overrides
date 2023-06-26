@@ -9,8 +9,8 @@ def create_tag(tag_name: str):
     print(f"Tag {tag_name} created")
     # commit changelog
     repo.git.add("CHANGELOG.md")
-    repo.index.commit("chore(changelog): update changelog")
     repo.git.add("version.txt")
+    repo.index.commit("chore(version): update version")
     print("Changelog updated | Version file updated")
     # push tag
     try:
@@ -30,6 +30,7 @@ def generate_version_file(version: str):
     print(f"Generating version file for version {version}")
     with open("version.txt", "w") as f:
         f.write(version)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
