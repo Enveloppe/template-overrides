@@ -1,5 +1,5 @@
 group:
-  - files:
+  files:
     - mkdocs.yml
     - docs/
     - overrides/
@@ -7,6 +7,6 @@ group:
     - .github/workflows/create_index.yml
     - .github/workflows/auto_update.yml
     - .github/workflows/update_req_clean_medias.yml
-    repos: |
+  repos: |
       ObsidianPublisher/publisher-template-gh-pages
       ObsidianPublisher/publisher-template-netlify
