@@ -10,14 +10,3 @@ group:
     repos: |
       ObsidianPublisher/publisher-template-gh-pages
       ObsidianPublisher/publisher-template-netlify
-  - files:
-    - source: .github/.env_netlify
-      dest: .github/.env
-    repos: |
-      ObsidianPublisher/publisher-template-netlify
-      ObsidianPublisher/obsidian-mkdocs-publisher-docs
-  - files:
-    - source: .github/.env_gh-pages
-      dest: .github/.env
-    repos: |
-      ObsidianPublisher/publisher-template-gh-pages
