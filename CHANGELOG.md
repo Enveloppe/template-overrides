@@ -1,6 +1,26 @@
 ---
-<a name="v2.3.4"></a>
-## [v2.3.4](https://github.com/ObsidianPublisher/follow_template/compare/2.3.3...v2.3.4) (2023-06-26)
+<a name="v2.4.0"></a>
+## [v2.4.0](https://github.com/ObsidianPublisher/follow_template/compare/2.3.4...v2.4.0) (2023-07-28)
+
+### Chore
+
+* **version:** update version
+
+### Fix
+
+* remove .env files
+* **on_files:** update for mkdocs 1.5.0 Mandatory update, unless you want to keep using mkdocs 1.4.0 or older.
+* **on_files:** fix encoding error
+* **sync:** fix yaml syntax for sync files
+* **sync:** remove sync for .env files
+
+### Style
+
+* **ruff:** fix
+
+---
+<a name="2.3.4"></a>
+## [2.3.4](https://github.com/ObsidianPublisher/follow_template/compare/2.3.3...2.3.4) (2023-06-26)
 
 ### Chore
 
