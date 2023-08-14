@@ -5,13 +5,13 @@ from git import Repo
 
 def create_tag(tag_name: str):
     repo = Repo(os.path.dirname(os.path.realpath(__file__)))
+    repo.git.add("CHANGELOG.md")
+    repo.git.add("version.txt")
+    repo.index.commit("chore(version): update changelog and version.txt")
+    print("Changelog updated | Version file updated")
     repo.create_tag(tag_name, message=f"chore(bump): v{tag_name}")
     print(f"Tag {tag_name} created")
     # commit changelog
-    repo.git.add("CHANGELOG.md")
-    repo.git.add("version.txt")
-    repo.index.commit("chore(version): update version")
-    print("Changelog updated | Version file updated")
     # push tag
     try:
         origin = repo.remote(name="origin")
