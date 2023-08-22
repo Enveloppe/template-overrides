@@ -1,9 +1,23 @@
 ---
-<a name="v2.4.2"></a>
-## [v2.4.2](https://github.com/ObsidianPublisher/follow_template/compare/2.4.1...v2.4.2) (2023-08-14)
+<a name="v3.0.0"></a>
+## [v3.0.0](https://github.com/ObsidianPublisher/follow_template/compare/2.4.2...v3.0.0) (2023-08-22)
+
+### Fix
+
+* **blog:** rename blog.html to article.html to be compatible with material-mkdocs blog
+
+### BREAKING CHANGE
+
+
+you need to rename the template in your file
+
+---
+<a name="2.4.2"></a>
+## [2.4.2](https://github.com/ObsidianPublisher/follow_template/compare/2.4.1...2.4.2) (2023-08-14)
 
 ### Chore
 
+* **version:** update changelog and version.txt
 * **version:** update version
 
 ### Fix
