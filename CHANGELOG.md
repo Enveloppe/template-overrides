@@ -1,6 +1,18 @@
 ---
-<a name="v3.0.0"></a>
-## [v3.0.0](https://github.com/ObsidianPublisher/follow_template/compare/2.4.2...v3.0.0) (2023-08-22)
+<a name="v3.0.1"></a>
+## [v3.0.1](https://github.com/ObsidianPublisher/follow_template/compare/3.0.0...v3.0.1) (2023-09-25)
+
+### Fix
+
+* pg & page mistake lead to a wrong date in some condition (raw_iso)
+
+---
+<a name="3.0.0"></a>
+## [3.0.0](https://github.com/ObsidianPublisher/follow_template/compare/2.4.2...3.0.0) (2023-08-22)
+
+### Chore
+
+* **version:** update changelog and version.txt
 
 ### Fix
 
