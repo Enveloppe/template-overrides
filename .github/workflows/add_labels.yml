@@ -1,0 +1,23 @@
+name: Add labels
+on:
+  issues:
+    types: [opened, edited, reopened]
+jobs:
+  add_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ startsWith(github.event.issue.title, '[FR]:') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            ✨ Enhancement
+      - uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ startsWith(github.event.issue.title, '[Bug]:') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            🐛 Bug
+
+
