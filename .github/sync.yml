@@ -5,5 +5,4 @@ group:
     - overrides/
     - find_unused_media.py
   repos: |
-      ObsidianPublisher/publisher-template-gh-pages
-      ObsidianPublisher/publisher-template-netlify
+      ObsidianPublisher/mkdocs-template
