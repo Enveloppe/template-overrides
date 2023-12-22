@@ -1,5 +1,4 @@
-This repository contains the essentials files for the Mkdocs Publisher Template :
-- [The mkdocs template](https://github.com/ObsidianPublisher/mkdocs-template/)
+This repository contains the essentials files for the [Mkdocs Publisher Template](https://github.com/ObsidianPublisher/mkdocs-template/)
 
 Each time a bug-fix or a feature is added, a release will be made. 
 The release will contains multiple zip files : 
